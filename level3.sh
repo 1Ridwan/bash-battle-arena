@@ -13,3 +13,5 @@ then
 else
 	echo "Hero missing!"
 fi
+
+## setting up a merge conflict
