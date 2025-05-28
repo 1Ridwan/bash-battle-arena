@@ -5,9 +5,7 @@ mkdir Arena
 cd Arena
 
 # create the files
-touch warrior.txt
-touch mage.txt
-touch archer.txt
+touch warrior.txt mage.txt archer.txt
 
 # list the files
 ls

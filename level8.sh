@@ -20,7 +20,4 @@ do
 done
 }
 
-
-
-
 findword "about"
