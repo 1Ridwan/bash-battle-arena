@@ -1,13 +1,11 @@
 #!/bin/bash
 
+
+# Mission: Create a script that copies all .txt files from the 
+# Arena directory to a new directory called Backup.
+
+
 mkdir -p Backup
 
-i=0
-x=$( ls -l ./Arena | wc -l )
+cp ./Arena/*.txt ./Backup
 
-files=($(ls ./Arena))
-
-for (( i=0; i<=${#files[@]}; i++ ))
-do
-	cp "./Arena/${files[i]}" ./Backup
-done
