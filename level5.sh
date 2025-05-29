@@ -1,15 +1,20 @@
 #!/bin/bash
 
-mkdir -p Battlefield #Create Battlefield directory
 
-# Create files inside Battlefield
-touch ./Battlefield/knight.txt ./Battlefield/sorcerer.txt ./Battlefield/rougue.txt
+# 1. Creates a directory names 'Battlefield'
+# 2. Inside Battlefield, create files named knight.txt, sorcerer.txt, and rogue.txt.
+# 3. Check if knight.txt exists; if it does, move it to a new directory called Archive.
+# 4. List the contents of both Battlefield and Archive.
 
-# initialise check variable which is equal to "knight.txt" if it exists
-check=$(ls ./Battlefield | grep "knight.txt" )
+mkdir -p "Battlefield"
+touch Battlefield/knight.txt Battlefield/sorcerer.txt Battlefield/rogue.txt
 
-if [ "$check" == "knight.txt" ]
+if [ -f "Battlefield/knight.txt" ];
 then
-	mv ./Battlefield/knight.txt ./Archive # move knight.txt into archive
-	ls ./Archive ./Battlefield # list contents of both directories
+	echo "Knight found!"
+	mkdir -p "Archive"
+	mv ./Battlefield/knight.txt ./Archive
+	ls Battlefield Archive
+else
+	echo "Knight not found!"
 fi
