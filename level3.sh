@@ -4,8 +4,9 @@
 # Arena directory. If it does, print Hero found!; otherwise,
 # print Hero missing!.
 
-if [ -f "Arena/hero.txt" ]; then
-    echo "Hero found!"
+if [ -f "Arena/hero.txt" ];
+then
+	echo "Hero found!"
 else
-    echo "Hero missing!"
+	echo "Hero missing!"
 fi
